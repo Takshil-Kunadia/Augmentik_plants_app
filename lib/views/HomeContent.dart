@@ -1,6 +1,7 @@
-import 'package:augmentik_plants_app/views/ProductScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/ProductCard.dart';
 class HomeContent extends StatelessWidget {
   const HomeContent({Key? key}) : super(key: key);
 
@@ -18,50 +19,11 @@ class HomeContent extends StatelessWidget {
                 Text("Plants",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),textAlign: TextAlign.left,),],),),
             ),
           ),
-          Expanded(child: ListView.builder(itemBuilder: (context,index){
-            return InkWell(
-              onTap: (){
-                Navigator.push(context,MaterialPageRoute(builder: (context) => const ProductScreen()));
-              },
-              child: Container(
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  child: Container(
-                    child: Padding(
-                      padding: EdgeInsets.all(20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Image.asset('assets/plant1.jpeg')),
-                          SizedBox(height: 10,),
-                          Column(crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [Text("Turf Pot Plant",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                            Text("Big Leaf Plant",style: TextStyle(color: Colors.grey),),
-                            Row(children: [Text("\$45.00",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                              SizedBox(width: 30,),
-                              ElevatedButton(
-                                style: ButtonStyle(
-                                  elevation: MaterialStateProperty.all(15),
-                                  shape: MaterialStateProperty.all(
-                                    CircleBorder(),
-                                  ),
-                                  backgroundColor: MaterialStateProperty.all(Colors.green),
-                                  shadowColor: MaterialStateProperty.all(Colors.black54),
-                                ),
-                                  onPressed: (){}, child: Container(
-                                child: Icon(Icons.add),
-                              ),)],),],),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            );
+          Expanded(child: ListView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemBuilder: (context,index){
+            return ProductCard();
           }))
         ],
       ),

@@ -7,9 +7,9 @@ class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   static const List<DrawerItem> _drawerItems = <DrawerItem>[
-    DrawerItem(icon: Icon(Icons.people), label: "People"),
-    DrawerItem(icon: Icon(Icons.trending_up), label: "Trending"),
-    DrawerItem(icon: Icon(Icons.tv)),
+    DrawerItem(icon: Icon(Icons.energy_savings_leaf_outlined,color: Colors.lightGreen,),),
+    DrawerItem(icon: Icon(Icons.home_outlined,color: Colors.lightGreen,),),
+    DrawerItem(icon: Icon(Icons.shopping_cart_outlined,color: Colors.lightGreen,),),
   ];
 
   @override
@@ -17,14 +17,15 @@ class HomePage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         drawer: CurvedDrawer(
-            color: Colors.lightGreen,
-            labelColor: Colors.black54,
-            width: 75.0,
-            items: _drawerItems,
-        onTap: (index) {
-          //Handle button tap
-        },
-      ),
+          color: Colors.lightGreen,
+          //backgroundColor: Colors.white,
+          //labelColor: Colors.white,
+          width: 75.0,
+          items: _drawerItems,
+          onTap: (index) {
+            //Handle button tap
+          },
+        ),
         body: HomeContent(),
       ),
     );
