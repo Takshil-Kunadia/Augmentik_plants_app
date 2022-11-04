@@ -44,6 +44,30 @@
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_database/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_database/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_database/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/cloud_firestore/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/cloud_firestore/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/cloud_firestore/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_dynamic_links/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_dynamic_links/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_dynamic_links/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/cloud_firestore/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/cloud_firestore/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/cloud_firestore/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_database/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_database/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_database/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_dynamic_links/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_dynamic_links/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_dynamic_links/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_core/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_core/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_core/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_database/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_database/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Augmentik_plants_app/ios/.symlinks/plugins/firebase_database/.dart_tool" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 33, extension level 3 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

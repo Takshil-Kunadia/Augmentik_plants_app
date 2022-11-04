@@ -1,7 +1,15 @@
+
+import 'package:augmentik_plants_app/data/firestore_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../model/item.dart';
 class ProductScreen extends StatelessWidget {
-  const ProductScreen({Key? key}) : super(key: key);
+  final String? name;
+  final String? description;
+  final int? price;
+  final String? imageID;
+  const ProductScreen(this.name, this.description, this.price,this.imageID);
 
   @override
   Widget build(BuildContext context) {
@@ -30,17 +38,18 @@ class ProductScreen extends StatelessWidget {
                       children: [
                         ClipRRect(
                             borderRadius: BorderRadius.circular(20.0),
-                            child: Image.asset('assets/plant1.png')),
+                            child: Image.asset('assets/${imageID}.png')),
                         SizedBox(height: 35,),
                         Row(
                           children: [
                             SizedBox(width: 35,),
                             Flexible(
                               child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [Text("Turf Pot Plant",style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),),
+                                children: [
+                                  FittedBox(fit: BoxFit.fitWidth,child: Text("${name}",style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),)),
                                   Text("Big Leaf Plant",style: TextStyle(color: Colors.grey),),
-                                  Text(style: TextStyle(fontSize: 10),"Plant in a Glassbowl, which can be mounted at Augmentic Labs to embellish the Company's Interiorr as well as display  its deep emphasis on Environment"),
-                                  Row(children: [Text("\$45.00",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                                  Text(style: TextStyle(fontSize: 10),"${description}"),
+                                  Row(children: [Text("\$${price}.00",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                                     SizedBox(width: 30,),
                                     ElevatedButton(
                                       style: ButtonStyle(
@@ -51,7 +60,9 @@ class ProductScreen extends StatelessWidget {
                                         backgroundColor: MaterialStateProperty.all(Colors.white),
                                         shadowColor: MaterialStateProperty.all(Colors.black54),
                                       ),
-                                      onPressed: (){}, child: Container(
+                                      onPressed: (){
+                                        FirestoreHelper.create(Item(name:"Turf Pot Plant",count:1));
+                                      }, child: Container(
                                       child: Icon(Icons.add,color: Colors.lightGreen,),
                                     ),)],),],),
                             ),
