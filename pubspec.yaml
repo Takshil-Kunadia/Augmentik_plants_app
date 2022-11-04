@@ -36,7 +36,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3 #latest version
   curved_drawer_fork: ^0.0.1
-
+  firebase_database: ^10.0.3
+  cloud_firestore: ^4.0.4
+  firebase_dynamic_links: ^5.0.4
+  firebase_core: ^2.1.1
+  get: ^4.6.5
+  intl: ^0.17.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

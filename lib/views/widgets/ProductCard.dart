@@ -1,9 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import '../ProductScreen.dart';
 class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
   }) : super(key: key);
+
+  static late int itemCount=0;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +43,11 @@ class ProductCard extends StatelessWidget {
                             backgroundColor: MaterialStateProperty.all(Colors.white),
                             shadowColor: MaterialStateProperty.all(Colors.black54),
                           ),
-                          onPressed: (){}, child: Container(
+                          onPressed: (){
+                            itemCount++;
+                            addItemtoCart("Turfpot",itemCount);
+                            print(itemCount);
+                          }, child: Container(
                           child: Icon(Icons.add,color: Colors.lightGreen,),
                         ),)],),],),
                 ],
@@ -50,5 +57,14 @@ class ProductCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future addItemtoCart(String s, int itemCount) async{
+    final docUser = FirebaseFirestore.instance.collection('Powdha').doc('totalItems');
+    final json ={
+      'Name': s,
+      'count': itemCount,
+    };
+    await docUser.set(json);
   }
 }
